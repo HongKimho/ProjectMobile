@@ -12,8 +12,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
-        // centerTitle: true,
+        toolbarHeight: 204,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(30))),
         title: Column(
           children: [
             const Text(
@@ -29,12 +30,15 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Padding(
           padding: const EdgeInsets.only(left: 16.0),
           child: CircleAvatar(
-            radius: 30,
-            backgroundColor: Colors.white,
-            
+            // radius: 50,
+            maxRadius: 50, // Uncomment this line
+            minRadius: 40,
+            backgroundImage: NetworkImage(
+                'https://i.pinimg.com/736x/fc/73/86/fc738661ef2b421e299df7f60b16bf6e.jpg'),
+            child: Icon(Icons.person),
           ),
         ),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Color(0xFF00A6BC),
       ),
       body: Center(),
     );
