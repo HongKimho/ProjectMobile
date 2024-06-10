@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Many Ellika',
+                        'JHhhfhf',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -103,7 +103,9 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             for (int i = 0; i < 10; i++)
               InkWell(
                 onTap: () {
