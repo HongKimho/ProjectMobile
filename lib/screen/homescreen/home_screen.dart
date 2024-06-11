@@ -27,29 +27,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(100),
                   child: Image.network(
-                    'https://qph.cf2.quoracdn.net/main-qimg-6a621297c9756caf93176ce853b1ba6b-pjlq',
+                    'https://th.bing.com/th/id/R.d69323893f1231165229b407d4733b95?rik=yUt3yQXimhapQA&pid=ImgRaw&r=0',
                     height: 50.0,
                     width: 50.0,
                     fit: BoxFit.cover,
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(left: 20.0),
+                  padding: EdgeInsets.only(left: 8.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'JHhhfhf',
+                      Text( // Profile Name
+                        'Sean Chao',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Color.fromARGB(255, 255, 255, 255),
                             fontSize: 16,
                             fontWeight: FontWeight.w700),
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 3,
                       ),
-                      Text(
-                        '012 399 399',
+                      Text( // Bio profile
+                        'My account',
                         style: TextStyle(color: Colors.white60, fontSize: 12),
                       ),
                     ],
@@ -57,13 +57,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
-            Container(
-              height: 45.0,
+            Container( // Search Box control
+              height: 40.0,
               margin: const EdgeInsets.only(top: 20.0),
               decoration: BoxDecoration(
                   color: ColorUse.card,
-                  borderRadius: BorderRadius.circular(100)),
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  borderRadius: BorderRadius.circular(10)),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -74,13 +74,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     size: 24.0,
                   ),
                   const SizedBox(width: 8.0),
-                  Expanded(
+                  Expanded( // Text in boxSearch control
                     child: TextField(
                       textAlignVertical: TextAlignVertical.center,
-                      decoration: InputDecoration(
+                      //cursorColor: Colors.white, // Change this to any color you prefer
+                      decoration: InputDecoration(                        
                         border: const OutlineInputBorder(
                             borderSide: BorderSide.none),
-                        hintText: 'Search...',
+                        hintText: 'Search',
+                        
                         hintStyle: TextStyle(
                           color: Colors.grey.shade400,
                           fontWeight: FontWeight.w400,
@@ -97,13 +99,13 @@ class _HomeScreenState extends State<HomeScreen> {
             )
           ],
         ),
-        backgroundColor: ColorUse.background,
-        elevation: 0.0,
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+        elevation: 10.0,
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             for (int i = 0; i < 10; i++)
@@ -227,7 +229,7 @@ class _HomeScreenState extends State<HomeScreen> {
             _currentIndex = index;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.sms),
             label: 'Chat',
