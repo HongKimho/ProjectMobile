@@ -1,4 +1,4 @@
-import 'package:chat_app/utils/color.dart';
+import 'package:chat_app/data/color.dart';
 import 'package:flutter/material.dart';
 
 class SendChatScreen extends StatefulWidget {
