@@ -13,9 +13,10 @@ class _SendChatScreenState extends State<SendChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorUse.background,
-      //appbar
+      
+      //App bar
       appBar: AppBar(
-        leadingWidth: 45,
+        leadingWidth: 35,
         foregroundColor: Colors.white,
         backgroundColor: ColorUse.card,
         title: Row(
@@ -23,7 +24,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
             ClipRRect(
               borderRadius: BorderRadius.circular(100),
               child: Image.network(
-                  'https://images.unsplash.com/photo-1565160657870-c332a2259da4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbmElMjBnaXJsfGVufDB8fDB8fHww',
+                  'https://static.vecteezy.com/system/resources/previews/024/183/502/original/male-avatar-portrait-of-a-young-man-with-a-beard-illustration-of-male-character-in-modern-color-style-vector.jpg',
                   height: 40,
                   width: 40,
                   fit: BoxFit.cover),
@@ -31,7 +32,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
             const SizedBox(width: 10),
             const Column(
               children: [
-                Text('Elizabeth',
+                Text('Johnny',
                     style: TextStyle(
                         color: ColorUse.text,
                         fontSize: 16,
@@ -60,14 +61,18 @@ class _SendChatScreenState extends State<SendChatScreen> {
           )
         ],
       ),
-      //body
+      
+      
+      //Body
       body: Expanded(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Column(
               children: [
-                // the profile show
+                
+                
+                // Profile show
                 Column(
                   children: [
                     const SizedBox(
@@ -76,21 +81,21 @@ class _SendChatScreenState extends State<SendChatScreen> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(100),
                       child: Image.network(
-                          'https://images.unsplash.com/photo-1565160657870-c332a2259da4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbmElMjBnaXJsfGVufDB8fDB8fHww',
+                          'https://static.vecteezy.com/system/resources/previews/024/183/502/original/male-avatar-portrait-of-a-young-man-with-a-beard-illustration-of-male-character-in-modern-color-style-vector.jpg',
                           height: 80,
                           width: 80,
                           fit: BoxFit.cover),
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      'Ellizabeth',
+                      'Johnny',
                       style: TextStyle(
                           fontSize: 16,
                           color: ColorUse.text,
                           fontWeight: FontWeight.w700),
                     ),
                     const Text(
-                      'Start your conversation here',
+                      'Start conversation with your friend.',
                       style: TextStyle(
                           fontSize: 12,
                           color: Colors.white54,
@@ -101,16 +106,18 @@ class _SendChatScreenState extends State<SendChatScreen> {
                     ),
                   ],
                 ),
-                // chat from
+                
+                // Replies Chat from Friend
                 Padding(
-                  padding: const EdgeInsets.only(right: 60),
+                  padding: const EdgeInsets.only(right: 60, top: 20),
+                  // padding: const EdgeInsets.only(right: 120),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(100),
                         child: Image.network(
-                            'https://images.unsplash.com/photo-1565160657870-c332a2259da4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbmElMjBnaXJsfGVufDB8fDB8fHww',
+                            'https://static.vecteezy.com/system/resources/previews/024/183/502/original/male-avatar-portrait-of-a-young-man-with-a-beard-illustration-of-male-character-in-modern-color-style-vector.jpg',
                             height: 30,
                             width: 30,
                             fit: BoxFit.cover),
@@ -120,36 +127,58 @@ class _SendChatScreenState extends State<SendChatScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 10),
+                              margin: const EdgeInsets.symmetric(horizontal: 10),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 15.0, vertical: 10),
                               decoration: BoxDecoration(
                                   color: ColorUse.card,
                                   borderRadius: BorderRadius.circular(10)),
-                              child: const Text(
-                                'Hello b :(',
-                                style: TextStyle(
-                                    color: ColorUse.text,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400),
+                              child: const Row( // Control text meassage
+                                children: [
+                                  Text('Hello :)',
+                                    style: TextStyle(
+                                        color: ColorUse.text,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                  SizedBox(width: 5),
+                                      Text(
+                                      '00:21 AM',
+                                      style: TextStyle(
+                                      color: Colors.white30,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                                ]
                               ),
+
                             ),
                             const SizedBox(height: 3),
                             Container(
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 10),
+                              margin: const EdgeInsets.symmetric(horizontal: 10),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 15.0, vertical: 10),
                               decoration: BoxDecoration(
                                   color: ColorUse.card,
                                   borderRadius: BorderRadius.circular(10)),
-                              child: const Text(
-                                'Can we start it again ?',
-                                style: TextStyle(
-                                    color: ColorUse.text,
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w400),
+                              child: const Row(
+                                children: [
+                                  Text(
+                                     'How do you do?',
+                                    style: TextStyle(
+                                        color: ColorUse.text,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                  SizedBox(width: 5),
+                                      Text(
+                                      '00:21 AM',
+                                      style: TextStyle(
+                                      color: Colors.white30,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400),
+                                ),
+                                ]
                               ),
                             ),
                           ],
@@ -158,7 +187,9 @@ class _SendChatScreenState extends State<SendChatScreen> {
                     ],
                   ),
                 ),
-                // chat to
+                
+                
+                // Replies Chat from yourself
                 Padding(
                   padding: const EdgeInsets.only(left: 60, top: 30),
                   child: Row(
@@ -178,7 +209,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                             child: const Row(
                               children: [
                                 Text(
-                                  'huh ?',
+                                  'Hi :)',
                                   style: TextStyle(
                                       color: ColorUse.text,
                                       fontSize: 12,
@@ -186,7 +217,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                                 ),
                                 SizedBox(width: 5),
                                 Text(
-                                  '7:48 PM',
+                                  '00:22 AM',
                                   style: TextStyle(
                                       color: Colors.white30,
                                       fontSize: 10,
@@ -194,10 +225,12 @@ class _SendChatScreenState extends State<SendChatScreen> {
                                 ),
                                 SizedBox(width: 5),
                                 Icon(Icons.done_all_outlined,
-                                    size: 12, color: Colors.white60)
+                                    size: 15, color: Colors.white60)
                               ],
                             ),
                           ),
+                          
+                          // RepliesBox
                           const SizedBox(height: 3),
                           Container(
                             margin: const EdgeInsets.symmetric(horizontal: 10),
@@ -209,7 +242,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                             child: const Row(
                               children: [
                                 Text(
-                                  'Start for what ?',
+                                  'I do something!',
                                   style: TextStyle(
                                       color: ColorUse.text,
                                       fontSize: 12,
@@ -217,7 +250,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                                 ),
                                 SizedBox(width: 5),
                                 Text(
-                                  '7:48 PM',
+                                  '00:22 AM',
                                   style: TextStyle(
                                       color: Colors.white30,
                                       fontSize: 10,
@@ -225,7 +258,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                                 ),
                                 SizedBox(width: 5),
                                 Icon(Icons.done_all_outlined,
-                                    size: 12, color: Colors.white60)
+                                    size: 15, color: Colors.white60)
                               ],
                             ),
                           ),
@@ -239,7 +272,8 @@ class _SendChatScreenState extends State<SendChatScreen> {
           ),
         ),
       ),
-      //bottom tab
+      
+      //Bottom tab
       bottomNavigationBar: Container(
         height: 55,
         color: ColorUse.card,
@@ -274,7 +308,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                       textAlignVertical: TextAlignVertical.center,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(borderSide: BorderSide.none),
-                        hintText: 'Wrtite you message',
+                        hintText: 'Message',
                         hintStyle: TextStyle(
                           color: Colors.white38,
                           fontWeight: FontWeight.w400,
