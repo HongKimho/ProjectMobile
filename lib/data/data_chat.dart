@@ -87,7 +87,7 @@ class _DataChatScreenState extends State<DataChatScreen> {
                                 ),
                                 SizedBox(height: 7.0),
                                 Text(
-                                  'How do you do?',
+                                  'How do you do ?',
                                   style: TextStyle(
                                       fontSize: 12.0,
                                       color: Color.fromARGB(255, 255, 255, 255),
