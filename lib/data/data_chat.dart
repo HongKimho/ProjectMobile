@@ -1,3 +1,5 @@
+import 'package:chat_app/screen/homescreen/Login_screen.dart';
+import 'package:chat_app/screen/homescreen/home_screen.dart';
 import 'package:chat_app/screen/homescreen/send_chat_screen.dart';
 import 'package:chat_app/data/color.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +19,7 @@ class _DataChatScreenState extends State<DataChatScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(
-              height: 10,
+            const SizedBox(height: 10,
             ),
 
             // Chat with new messages
@@ -29,7 +30,7 @@ class _DataChatScreenState extends State<DataChatScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const SendChatScreen()),
+                        builder: (context) => const HomeScreen()),
                   );
                 },
 
@@ -87,7 +88,7 @@ class _DataChatScreenState extends State<DataChatScreen> {
                                 ),
                                 SizedBox(height: 7.0),
                                 Text(
-                                  'How do  do?',
+                                  'How do you do ?',
                                   style: TextStyle(
                                       fontSize: 12.0,
                                       color: Color.fromARGB(255, 255, 255, 255),
