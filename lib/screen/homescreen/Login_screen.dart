@@ -1,32 +1,14 @@
-import 'package:chat_app/screen/homescreen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_app/data/color.dart';
-
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
-
-  @override
-  State<MyWidget> createState() => _MyWidgetState();
-}
-
-class _MyWidgetState extends State<MyWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginScreen(),
-    );
-  }
-}
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  LoginScreenState createState() => LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  bool rememberMe = false; // true for Tick and false for untick
-
+class LoginScreenState extends State<LoginScreen> {
+  //bool rememberMe = false; // true for Tick and false for untick
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,20 +37,32 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             
             const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
-                labelText: 'Email or Phone Number',
-                border: OutlineInputBorder(),
+            Container (
+              child: const TextField(
+                keyboardType: TextInputType.multiline,
+                style: TextStyle(
+                  color: ColorUse.text,
+                ),
+                decoration: InputDecoration(
+                  labelText: 'Email or Phone Number',
+                  border: OutlineInputBorder(),
+                ),
               ),
             ),
             
             const SizedBox(height: 10),
-            const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Password',
-                border: OutlineInputBorder(),
-                suffixIcon: Icon(Icons.visibility),
+            Container(
+              child: const TextField(
+                keyboardType: TextInputType.multiline,
+                style: TextStyle(
+                  color: ColorUse.text,
+                ),
+                obscureText: true, // Using for convert text to [*] character
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  border: OutlineInputBorder(),
+                  suffixIcon: Icon(Icons.visibility),
+                ),
               ),
             ),
             
@@ -106,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(vertical: 1),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 textStyle: const TextStyle(fontSize: 16),
               ),
               child: const Text('Sign Up'),
@@ -155,6 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
 
+                    
                     const SizedBox(width: 22,),
                      Container(
                       width: 50,
