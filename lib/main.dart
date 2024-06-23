@@ -1,4 +1,5 @@
 import 'package:chat_app/screen/homescreen/AddContact_Screen.dart';
+import 'package:chat_app/screen/homescreen/Login1_screen.dart';
 import 'package:chat_app/screen/homescreen/Login_screen.dart';
 import 'package:chat_app/screen/homescreen/SignUp_Screen.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Chat App',
-      home: LoginScreen(),
+      home: Login1Screen(),
     );
   }
 }
