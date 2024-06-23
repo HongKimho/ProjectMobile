@@ -1,5 +1,6 @@
 import 'package:chat_app/data/color.dart';
 import 'package:chat_app/data/data_chat.dart';
+import 'package:chat_app/screen/homescreen/AddContact_Screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,7 +17,11 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: ColorUse.background,
 
       // App bar
+      
       appBar: AppBar(
+        leadingWidth: 40,
+        //foregroundColor: Colors.white,
+        backgroundColor: ColorUse.background,
         toolbarHeight: 160,
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(bottom: Radius.circular(0))),
@@ -109,7 +114,6 @@ class _HomeScreenState extends State<HomeScreen> {
             )
           ],
         ),
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         elevation: 10.0,
       ),
 
@@ -126,7 +130,14 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.white,
             size: 45,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AddContactScreen(),
+              ),
+            );
+          },
         ),
       ),
     );

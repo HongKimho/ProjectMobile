@@ -1,3 +1,5 @@
+import 'package:chat_app/screen/homescreen/SignUp_Screen.dart';
+import 'package:chat_app/screen/homescreen/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_app/data/color.dart';
 
@@ -8,7 +10,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
-  //bool rememberMe = false; // true for Tick and false for untick
+  bool rememberMe = false; // true for Tick and false for untick
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,7 @@ class LoginScreenState extends State<LoginScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Text(
-              'Sign Up ✨',
+              'Login ✨',
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -31,7 +33,7 @@ class LoginScreenState extends State<LoginScreen> {
             ),
             const SizedBox(height: 10),
             const Text(
-              'Welcome! Please enter your information to sign up account.',
+              'Welcome! Please enter your information to login account.',
               style: TextStyle(fontSize: 16, color: Colors.white),
               textAlign: TextAlign.center,
             ),
@@ -66,7 +68,7 @@ class LoginScreenState extends State<LoginScreen> {
               ),
             ),
             
-            /*const SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -94,16 +96,22 @@ class LoginScreenState extends State<LoginScreen> {
                   ),
                 ),*/
               ],
-            ),*/
+            ),
 
-            const SizedBox(height: 20), // 
+            const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement( // Move to other screen -> no need back icon
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const HomeScreen()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 textStyle: const TextStyle(fontSize: 16),
               ),
-              child: const Text('Sign Up'),
+              child: const Text('Login'),
             ),
             
             const SizedBox(height: 20), // Control Text and Line
@@ -181,13 +189,21 @@ class LoginScreenState extends State<LoginScreen> {
             const SizedBox(height: 20),
             Center(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push( // Move to other screen -> no need back icon
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SignupScreen()),
+                  );
+                },
                 child: const Text("Don't have an account? Sign up"),
               ),
             ),
           ],
         ),
       ),
+
+      
     );
   }
 }

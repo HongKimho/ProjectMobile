@@ -15,6 +15,9 @@ class _DataChatScreenState extends State<DataChatScreen> {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: ColorUse.background,
+      
+      
+      // Body
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -29,7 +32,7 @@ class _DataChatScreenState extends State<DataChatScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const HomeScreen()),
+                        builder: (context) => const SendChatScreen()),
                   );
                 },
 

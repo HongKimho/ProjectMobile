@@ -16,7 +16,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
       
       //App bar
       appBar: AppBar(
-        leadingWidth: 35,
+        leadingWidth: 40,
         foregroundColor: Colors.white,
         backgroundColor: ColorUse.card,
         title: Row(
@@ -316,7 +316,8 @@ class _SendChatScreenState extends State<SendChatScreen> {
                         alignLabelWithHint: true,
                       ),
                     ),
-                  )),
+                  )
+                ),
             ),
             IconButton(
               icon: const Icon(Icons.send),

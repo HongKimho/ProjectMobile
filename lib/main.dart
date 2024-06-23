@@ -1,4 +1,6 @@
+import 'package:chat_app/screen/homescreen/AddContact_Screen.dart';
 import 'package:chat_app/screen/homescreen/Login_screen.dart';
+import 'package:chat_app/screen/homescreen/SignUp_Screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
