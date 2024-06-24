@@ -144,7 +144,7 @@ class LoginScreenState extends State<LoginScreen> {
                         builder: (context) => const HomeScreen()),
                   );*/
                     },
-                    child: Container( // Use for access Boder=Circle
+                    child: SizedBox( // Use for access Boder=Circle
                       width: 50,
                       height: 50,
                       child: ClipRRect(
@@ -159,7 +159,7 @@ class LoginScreenState extends State<LoginScreen> {
 
                     
                     const SizedBox(width: 22,),
-                     Container(
+                     SizedBox(
                       width: 50,
                       height: 50,
                       child: ClipRRect(
@@ -172,7 +172,7 @@ class LoginScreenState extends State<LoginScreen> {
                     ),
                    
                   const SizedBox(width: 22,),
-                  Container(
+                  SizedBox(
                     width: 50,
                     height: 50,
                     child: ClipRRect(

@@ -1,4 +1,3 @@
-import 'package:chat_app/screen/homescreen/home_screen.dart';
 import 'package:chat_app/screen/homescreen/send_chat_screen.dart';
 import 'package:chat_app/data/color.dart';
 import 'package:flutter/material.dart';
