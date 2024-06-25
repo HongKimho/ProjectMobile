@@ -1,6 +1,7 @@
 import 'package:chat_app/data/color.dart';
 import 'package:chat_app/data/data_chat.dart';
 import 'package:chat_app/screen/homescreen/AddContact_Screen.dart';
+import 'package:chat_app/screen/homescreen/setting.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: ColorUse.background,
 
       // App bar
-      
+
       appBar: AppBar(
         leadingWidth: 40,
         //foregroundColor: Colors.white,
@@ -28,42 +29,51 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Column(
           children: [
             const SizedBox(height: 10.0),
-            Row(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.network(
-                    'https://th.bing.com/th/id/R.d69323893f1231165229b407d4733b95?rik=yUt3yQXimhapQA&pid=ImgRaw&r=0',
-                    height: 50.0,
-                    width: 50.0,
-                    fit: BoxFit.cover,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SettingScreen()),
+                );
+              },
+              child: Row(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: Image.network(
+                      'https://th.bing.com/th/id/R.d69323893f1231165229b407d4733b95?rik=yUt3yQXimhapQA&pid=ImgRaw&r=0',
+                      height: 50.0,
+                      width: 50.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        // Profile Name
-                        'Sean Chao',
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 255, 255, 255),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
-                        height: 3,
-                      ),
-                      Text(
-                        // Bio profile
-                        'My account',
-                        style: TextStyle(color: Colors.white60, fontSize: 12),
-                      ),
-                    ],
+                  const Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          // Profile Name
+                          'Sean Chao',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 255, 255, 255),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700),
+                        ),
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Text(
+                          // Bio profile
+                          'My account',
+                          style: TextStyle(color: Colors.white60, fontSize: 12),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Container(
               // Search Box control
@@ -82,18 +92,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.grey,
                     size: 24.0,
                   ),
-                  
+
                   const SizedBox(width: 8.0),
                   // Control text in boxSearch
                   Expanded(
                     child: TextField(
-                      keyboardType: TextInputType.multiline, // Control text typing in FieldBox
+                      keyboardType: TextInputType
+                          .multiline, // Control text typing in FieldBox
                       style: const TextStyle(
                           color: ColorUse.text,
                           fontSize: 14,
                           fontWeight: FontWeight.w400),
 
-                      textAlignVertical: TextAlignVertical.center, // Control textTitle in the FieldBox
+                      textAlignVertical: TextAlignVertical
+                          .center, // Control textTitle in the FieldBox
                       decoration: InputDecoration(
                         border: const OutlineInputBorder(
                             borderSide: BorderSide.none),

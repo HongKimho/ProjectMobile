@@ -88,13 +88,12 @@ class _DataChatScreenState extends State<DataChatScreen> {
                                       color: ColorUse.text,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                SizedBox(height: 7.0),
-                                const Text(
-                                  //item["message"].toString(),
-                                  'How do you do ?',
-                                  style: TextStyle(
+                                const SizedBox(height: 7.0),
+                                 Text(
+                                  item["message"].toString(),
+                                  style:  TextStyle(
                                       fontSize: 12.0,
-                                      color: Color.fromARGB(255, 255, 255, 255),
+                                      color: item["badge"] >= 1 ? Colors.white : Colors.grey,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ],
@@ -107,10 +106,10 @@ class _DataChatScreenState extends State<DataChatScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            const Text(
-                              //item["time"].tosString(),
-                              '00:21',
-                              style: TextStyle(
+                             Text(
+                              item["time"].toString(),
+                              
+                              style: const TextStyle(
                                   fontSize: 10.0,
                                   color: Colors.grey,
                                   fontWeight: FontWeight.w400),
@@ -118,19 +117,18 @@ class _DataChatScreenState extends State<DataChatScreen> {
                             const SizedBox(height: 7.0),
 
                             // New message icon
+                            if (item["badge"] !=0)
                             Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 5.0, vertical: 2.0),
+                              padding: const EdgeInsets.symmetric(horizontal: 5, vertical:1),
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(13.0),
+                                borderRadius: BorderRadius.circular(10),
                                 color: Colors.lightBlue,
                               ),
-                              child: const Text(
-                                '3',
-                                style: TextStyle(
-                                  fontSize: 8.0,
+                              child: Text(
+                                item["badge"].toString(),
+                                style: const TextStyle(
+                                  fontSize: 10,
                                   color: ColorUse.text,
-                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),

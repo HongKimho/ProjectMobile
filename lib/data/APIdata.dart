@@ -6,7 +6,7 @@ class APIdata {
     "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkS8v2vSpIzK2HCPWDdfZP3vbvQhEm5fxuwkNENSNSswbBoWScLb0h3GjVFqgZB9FEpSg&usqp=CAU",
     "message": "Hey, how are you?",
     "time": "10:45 AM",
-    "badge": 0,
+    "badge": 2,
     "onlineStatus": true
   },
   {
@@ -22,7 +22,7 @@ class APIdata {
     "avatar": "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png",
     "message": "Can you send me the files?",
     "time": "Yesterday",
-    "badge": 0,
+    "badge": 4,
     "onlineStatus": true
   },
   {

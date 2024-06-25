@@ -3,6 +3,7 @@ import 'package:chat_app/screen/homescreen/LoginsScreen/Login1_screen.dart';
 import 'package:chat_app/screen/homescreen/Login_screen.dart';
 import 'package:chat_app/screen/homescreen/LoginsScreen/VerifySMSOTP.dart';
 import 'package:chat_app/screen/homescreen/home_screen.dart';
+import 'package:chat_app/screen/homescreen/setting.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Chat App',
       debugShowCheckedModeBanner: false,
-      home: CreatePIN_Screen(),
+      home: HomeScreen(),
     );
   }
 }
