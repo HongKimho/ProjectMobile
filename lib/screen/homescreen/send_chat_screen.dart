@@ -47,6 +47,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
             ),
           ],
         ),
+        
         actions: [
           IconButton(
             icon: const Icon(Icons.search),

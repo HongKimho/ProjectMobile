@@ -1,6 +1,7 @@
 import 'package:chat_app/data/color.dart';
 import 'package:chat_app/screen/homescreen/Login_screen.dart';
-import 'package:chat_app/screen/homescreen/VerifySMSOTP.dart';
+import 'package:chat_app/screen/homescreen/LoginsScreen/VerifySMSOTP.dart';
+import 'package:chat_app/screen/homescreen/LoginsScreen/VerifySMSOTP.dart';
 import 'package:flutter/material.dart';
 
 class Login1Screen extends StatefulWidget {
@@ -39,11 +40,12 @@ class Login1ScreenState extends State<Login1Screen> {
                 fontSize: 16,
               ),
             ),
+
             const SizedBox(height: 32),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.only(top: 3, right: 10, left: 10 ),
               decoration: BoxDecoration(
-                  border: Border.all(width: 1, color: Colors.white)),
+                  border: Border.all(width: 0.5, color: Colors.white)),
               child: Row(
                 children: [
                   Theme(
@@ -83,15 +85,16 @@ class Login1ScreenState extends State<Login1Screen> {
                       }).toList(),
                     ),
                   ),
+
                    Expanded(
                     child: Container(
-                      margin: const EdgeInsets.only(left: 20,),
-                      padding: const EdgeInsets.only(left: 20,),
+                      margin: const EdgeInsets.only(left: 10,),
+                      padding: const EdgeInsets.only(left: 10,), // padding use for custom gap between 'Your phone number' & 'Country code'
                       decoration: const BoxDecoration(
                         border: BorderDirectional(
                           // top: BorderSide(width: 1, color: Colors.white),
                           // bottom: BorderSide(width: 1, color: Colors.white),
-                          start: BorderSide(width: 0.5, color: Colors.white),
+                          start: BorderSide(width: 3, color: Colors.grey),
                           // end: BorderSide(width: 1, color: Colors.white),
                         ),
                       ),
@@ -100,7 +103,8 @@ class Login1ScreenState extends State<Login1Screen> {
                         decoration: InputDecoration(
                             hintText: 'Your Phone Number',
                             hintStyle: TextStyle(color: Colors.white54),
-                            border: InputBorder.none),
+                            // border: InputBorder.none
+                        ),
                       ),
                     ),
                   ),
@@ -109,7 +113,7 @@ class Login1ScreenState extends State<Login1Screen> {
             ),
             const SizedBox(height: 15),
             Container(
-              padding: const EdgeInsets.only(left: 370),
+              padding: const EdgeInsets.all(10),
               child: TextButton(
                 onPressed: () {
                   Navigator.pushReplacement(

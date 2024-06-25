@@ -1,5 +1,6 @@
 
 import 'package:chat_app/data/color.dart';
+import 'package:chat_app/screen/homescreen/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class VerifySMSotp extends StatefulWidget {
@@ -18,7 +19,6 @@ class _VerifySMSotpState extends State<VerifySMSotp> {
     super.initState();
     _startTimer();
   }
-
   void _startTimer() {
     Future.delayed(const Duration(seconds: 1), () {
       if (_timer > 0) {
@@ -113,20 +113,21 @@ class _VerifySMSotpState extends State<VerifySMSotp> {
                 },
                 child: const Text(
                   'Resend Code',
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.red),
                 ),
               ),
 
-            /*const SizedBox(height: 20), // Button resend code OTP
+            const SizedBox(height: 20),
             TextButton(
               onPressed: () {},
-              child: Text(
-                'Resent in 0:${_timer.toString().padLeft(2, '0')}',
-                style: const TextStyle(color: Colors.blue),
+              child: const Text(
+                'Continue',
+                style: TextStyle(color: Colors.blue, fontSize: 16),
               ),
-            ),*/
+            ),
           ],
         ),
+        
       ),
     );
   }
