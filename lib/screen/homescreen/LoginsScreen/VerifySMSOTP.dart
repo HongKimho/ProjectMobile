@@ -119,7 +119,9 @@ class _VerifySMSotpState extends State<VerifySMSotp> {
 
             const SizedBox(height: 20),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+              },
               child: const Text(
                 'Continue',
                 style: TextStyle(color: Colors.blue, fontSize: 16),

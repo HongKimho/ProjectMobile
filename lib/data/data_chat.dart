@@ -115,7 +115,6 @@ class _DataChatScreenState extends State<DataChatScreen> {
                                   fontWeight: FontWeight.w400),
                             ),
                             const SizedBox(height: 7.0),
-
                             // New message icon
                             if (item["badge"] !=0)
                             Container(
@@ -128,7 +127,7 @@ class _DataChatScreenState extends State<DataChatScreen> {
                                 item["badge"].toString(),
                                 style: const TextStyle(
                                   fontSize: 10,
-                                  color: ColorUse.text,
+                                  color: Colors.black,
                                 ),
                               ),
                             ),
@@ -140,10 +139,6 @@ class _DataChatScreenState extends State<DataChatScreen> {
                 ),
               );
             }),
-
-            // chat with Seen messages
-
-            // Chat with sent messages
           ],
         ),
       ),

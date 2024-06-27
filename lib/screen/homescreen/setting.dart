@@ -31,7 +31,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   height: 350,
                   width: double.infinity,
                   child: Image.network(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKZJAaLyU43Xw8VWkiCpbyVNmq8XEJy3lO4A&s',
+                    'https://sb.kaleidousercontent.com/67418/992x558/7632960ff9/people.png',
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -56,7 +56,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Manith',
+                        'John Smith',
                         style: TextStyle(
                             color: ColorUse.text,
                             fontFamily: 'Poppins',
@@ -64,7 +64,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             fontWeight: FontWeight.w500),
                       ),
                       Text(
-                        '098 77 66 66  @manith123',
+                        '098 77 66 66',
                         style: TextStyle(
                             color: Colors.white70,
                             fontFamily: 'Poppins',

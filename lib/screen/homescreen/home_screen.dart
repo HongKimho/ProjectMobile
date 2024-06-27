@@ -135,11 +135,11 @@ class _HomeScreenState extends State<HomeScreen> {
       // Add new button
       floatingActionButton: Container(
         decoration: BoxDecoration(
-            color: Colors.red, borderRadius: BorderRadius.circular(100)),
+            color: Colors.lightBlue, borderRadius: BorderRadius.circular(100)),
         child: IconButton(
           icon: const Icon(
             Icons.add,
-            color: Colors.white,
+            color: Colors.black,
             size: 45,
           ),
           onPressed: () {

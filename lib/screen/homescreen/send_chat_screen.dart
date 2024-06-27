@@ -13,7 +13,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorUse.background,
-      
+
       //App bar
       appBar: AppBar(
         leadingWidth: 40,
@@ -47,7 +47,6 @@ class _SendChatScreenState extends State<SendChatScreen> {
             ),
           ],
         ),
-        
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -62,8 +61,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
           )
         ],
       ),
-      
-      
+
       //Body
       body: Expanded(
         child: SingleChildScrollView(
@@ -71,8 +69,6 @@ class _SendChatScreenState extends State<SendChatScreen> {
             padding: const EdgeInsets.all(15.0),
             child: Column(
               children: [
-                
-                
                 // Profile show
                 Column(
                   children: [
@@ -107,7 +103,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                     ),
                   ],
                 ),
-                
+
                 // Replies Chat from Friend
                 Padding(
                   padding: const EdgeInsets.only(right: 60, top: 20),
@@ -135,23 +131,23 @@ class _SendChatScreenState extends State<SendChatScreen> {
                                 borderRadius: BorderRadius.circular(10)),
                             child: const Row(
                               children: [
-                                Text('Hello :)',
+                                Text(
+                                  'Hello :)',
                                   style: TextStyle(
                                       color: ColorUse.text,
                                       fontSize: 12,
                                       fontWeight: FontWeight.w400),
                                 ),
                                 SizedBox(width: 5),
-                                    Text(
-                                    '00:21 AM',
-                                    style: TextStyle(
-                                    color: Colors.white30,
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w400),
-                                    )
+                                Text(
+                                  '00:21 AM',
+                                  style: TextStyle(
+                                      color: Colors.white30,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400),
+                                )
                               ],
                             ),
-                      
                           ),
                           const SizedBox(height: 3),
                           Container(
@@ -161,33 +157,30 @@ class _SendChatScreenState extends State<SendChatScreen> {
                             decoration: BoxDecoration(
                                 color: ColorUse.card,
                                 borderRadius: BorderRadius.circular(10)),
-                            child: const Row(
-                              children: [
-                                Text(
-                                   'How do you do?',
-                                  style: TextStyle(
-                                      color: ColorUse.text,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400),
-                                ),
-                                SizedBox(width: 5),
-                                    Text(
-                                    '00:21 AM',
-                                    style: TextStyle(
+                            child: const Row(children: [
+                              Text(
+                                'How do you do?',
+                                style: TextStyle(
+                                    color: ColorUse.text,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                              SizedBox(width: 5),
+                              Text(
+                                '00:21 AM',
+                                style: TextStyle(
                                     color: Colors.white30,
                                     fontSize: 10,
                                     fontWeight: FontWeight.w400),
                               ),
-                              ]
-                            ),
+                            ]),
                           ),
                         ],
                       )
                     ],
                   ),
                 ),
-                
-                
+
                 // Replies Chat from yourself
                 Padding(
                   padding: const EdgeInsets.only(left: 60, top: 30),
@@ -228,7 +221,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                               ],
                             ),
                           ),
-                          
+
                           // RepliesBox
                           const SizedBox(height: 3),
                           Container(
@@ -271,62 +264,130 @@ class _SendChatScreenState extends State<SendChatScreen> {
           ),
         ),
       ),
-      
+
       //Bottom tab
       bottomNavigationBar: Container(
-        height: 55,
-        color: ColorUse.card,
+        // height: 55,
+        padding: EdgeInsets.symmetric(horizontal: 10),
+        // color: ColorUse.card,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IconButton(
-              icon: const Icon(Icons.photo_library_outlined),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(
-                Icons.mic,
-                size: 27,
+            /*Container(
+              margin: EdgeInsets.symmetric(horizontal: 2),
+              decoration: BoxDecoration(
+                  color: Colors.lightBlue,
+                  borderRadius: BorderRadius.circular(100)),
+              
+              child: IconButton(
+                icon: const Icon(
+                  Icons.camera_alt,
+                  color: Colors.black,
+                ),
+                onPressed: () {},
               ),
-              onPressed: () {},
             ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.lightBlue,
+                  borderRadius: BorderRadius.circular(100)),
+              child: IconButton(
+                icon: const Icon(
+                  Icons.photo_library_outlined,
+                  color: Colors.black,
+                ),
+                onPressed: () {},
+              ),
+            ),*/
+
             Expanded(
               child: Container(
-                  decoration: BoxDecoration(
-                      color: ColorUse.background,
-                      borderRadius: BorderRadius.circular(50)),
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  margin: const EdgeInsets.symmetric(vertical: 8),
-                  child: const Expanded(
-                    child: TextField(
-                      keyboardType: TextInputType.multiline,
-                      style: TextStyle(
-                          color: ColorUse.text,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400),
-                      textAlignVertical: TextAlignVertical.center,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(borderSide: BorderSide.none),
-                        hintText: 'Message',
-                        hintStyle: TextStyle(
-                          color: Colors.white38,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 14,
+                decoration: BoxDecoration(
+                    color: ColorUse.background,
+                    borderRadius: BorderRadius.circular(50),
+                    border: Border.all(
+                      color: ColorUse.text,
+                      width: 1,
+                    )),
+                padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.lightBlue, borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: IconButton(
+                            icon: const Icon(
+                              Icons.camera_alt,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {},
+                          ),
+                    ),
+
+                    const Expanded(
+                      child: TextField(
+                        keyboardType: TextInputType.multiline,
+                        style: TextStyle(
+                            color: ColorUse.text,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400),
+                        textAlignVertical: TextAlignVertical.center,
+                        decoration: InputDecoration(
+                          border:
+                              OutlineInputBorder(borderSide: BorderSide.none),
+                          hintText: 'Message',
+                          hintStyle: TextStyle(
+                            color: Colors.white38,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 14,
+                          ),
+                          contentPadding:
+                              EdgeInsets.symmetric(horizontal: 10.0),
+                          alignLabelWithHint: true,
                         ),
-                        contentPadding: EdgeInsets.symmetric(horizontal: 10.0),
-                        alignLabelWithHint: true,
                       ),
                     ),
-                  )
+                    Row(
+                      children: [
+                        IconButton(
+                          icon: const Icon(
+                            Icons.photo_library_outlined,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {},
+                        ),
+
+                        IconButton(
+                          icon: const Icon(
+                            Icons.mic,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
+              ),
             ),
-            IconButton(
-              icon: const Icon(Icons.send),
-              onPressed: () {},
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.red, borderRadius: BorderRadius.circular(100)),
+              child: IconButton(
+                icon: const Icon(
+                  Icons.send,
+                  color: Colors.black,
+                ),
+                onPressed: () {},
+              ),
             ),
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
