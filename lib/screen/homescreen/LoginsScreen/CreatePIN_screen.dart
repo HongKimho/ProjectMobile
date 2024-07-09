@@ -1,4 +1,5 @@
 import 'package:chat_app/data/color.dart';
+import 'package:chat_app/screen/homescreen/LoginsScreen/AddProfile_screen.dart';
 import 'package:flutter/material.dart';
 
 class CreatePIN_Screen extends StatefulWidget {
@@ -72,19 +73,25 @@ class _CreatePIN_ScreenState extends State<CreatePIN_Screen> {
               ),
             ]),
             const SizedBox(height: 40),
-              Center(
-                child: TextButton(
-                onPressed: () {},
+            Container(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AddProfileScreen()),
+                  );
+                },
                 child: const Text(
-                   'Confirm',
-                   style: TextStyle(
-                     color: Colors.blue,
-                     fontSize: 16,
-                     fontWeight: FontWeight.bold,
-                   ),
-                 ),
+                  'Continue',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
+            ),
           ],
         ),
       ),

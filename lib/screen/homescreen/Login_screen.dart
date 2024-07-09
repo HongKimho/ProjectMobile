@@ -39,7 +39,7 @@ class LoginScreenState extends State<LoginScreen> {
             ),
             
             const SizedBox(height: 20),
-            Container (
+            Container(
               child: const TextField(
                 keyboardType: TextInputType.multiline,
                 style: TextStyle(

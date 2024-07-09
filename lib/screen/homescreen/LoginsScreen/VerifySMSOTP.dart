@@ -1,5 +1,6 @@
 
 import 'package:chat_app/data/color.dart';
+import 'package:chat_app/screen/homescreen/LoginsScreen/CreatePIN_screen.dart';
 import 'package:chat_app/screen/homescreen/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -120,11 +121,12 @@ class _VerifySMSotpState extends State<VerifySMSotp> {
             const SizedBox(height: 20),
             TextButton(
               onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                Navigator.pushReplacement(context, 
+                MaterialPageRoute(builder: (context) => CreatePIN_Screen()));
               },
               child: const Text(
                 'Continue',
-                style: TextStyle(color: Colors.blue, fontSize: 16),
+                style: TextStyle(color: Colors.blue, fontSize: 20),
               ),
             ),
           ],

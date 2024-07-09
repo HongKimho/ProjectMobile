@@ -1,4 +1,6 @@
 import 'package:chat_app/data/color.dart';
+import 'package:chat_app/screen/homescreen/LoginsScreen/AddProfile_screen.dart';
+import 'package:chat_app/screen/homescreen/LoginsScreen/SetNameProfile_screen.dart';
 import 'package:chat_app/screen/homescreen/loginsScreen/CreatePIN_screen.dart';
 import 'package:chat_app/screen/homescreen/LoginsScreen/Login1_screen.dart';
 import 'package:chat_app/screen/homescreen/Login_screen.dart';
@@ -44,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 3), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const Login1Screen()),
+      MaterialPageRoute(builder: (context) => Login1Screen()),
     );
   }
 
@@ -78,7 +80,7 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
       floatingActionButton: Container(
         height: 50,
-        width: 450,
+        width: 550,
         child: const Column(
           children: [
             Text(
@@ -89,15 +91,15 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontFamily: "Poppins",
                   color: ColorUse.subtext),
             ),
-            SizedBox(height: 3),
-            Text(
-              'Version: 0.0.1',
-              style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w300,
-                  fontFamily: "Poppins",
-                  color: ColorUse.subtext),
-            ),
+            // SizedBox(height: 3),
+            // Text(
+            //   'Version: 0.0.1',
+            //   style: TextStyle(
+            //       fontSize: 12,
+            //       fontWeight: FontWeight.w300,
+            //       fontFamily: "Poppins",
+            //       color: ColorUse.subtext),
+            // ),
           ],
         ),
       ),

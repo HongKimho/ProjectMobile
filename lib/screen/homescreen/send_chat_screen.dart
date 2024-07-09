@@ -56,9 +56,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
             icon: const Icon(Icons.call),
             onPressed: () {},
           ),
-          const SizedBox(
-            width: 10,
-          )
+          const SizedBox(width: 10),
         ],
       ),
 
@@ -193,8 +191,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                         children: [
                           Container(
                             margin: const EdgeInsets.symmetric(horizontal: 10),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 15.0, vertical: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
                             decoration: BoxDecoration(
                                 color: ColorUse.card,
                                 borderRadius: BorderRadius.circular(10)),
@@ -226,8 +223,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                           const SizedBox(height: 3),
                           Container(
                             margin: const EdgeInsets.symmetric(horizontal: 10),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 15.0, vertical: 10),
+                            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
                             decoration: BoxDecoration(
                                 color: ColorUse.card,
                                 borderRadius: BorderRadius.circular(10)),
@@ -321,8 +317,7 @@ class _SendChatScreenState extends State<SendChatScreen> {
                       child: IconButton(
                             icon: const Icon(
                               Icons.camera_alt,
-                              color: Colors.white,
-                            ),
+                              color: Colors.white,),
                             onPressed: () {},
                           ),
                     ),

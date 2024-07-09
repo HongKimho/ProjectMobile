@@ -40,10 +40,9 @@ class Login1ScreenState extends State<Login1Screen> {
                 fontSize: 16,
               ),
             ),
-
             const SizedBox(height: 32),
             Container(
-              padding: const EdgeInsets.only(top: 3, right: 10, left: 10 ),
+              padding: const EdgeInsets.only(top: 3, right: 10, left: 10),
               decoration: BoxDecoration(
                   border: Border.all(width: 0.5, color: Colors.white)),
               child: Row(
@@ -53,7 +52,9 @@ class Login1ScreenState extends State<Login1Screen> {
                       canvasColor: Colors.black,
                     ),
                     child: DropdownButton<int>(
-                      style: const TextStyle(color: Colors.black,),
+                      style: const TextStyle(
+                        color: Colors.black,
+                      ),
                       hint: const Text(
                         '+855',
                         style: TextStyle(fontSize: 12, color: ColorUse.text),
@@ -70,7 +71,14 @@ class Login1ScreenState extends State<Login1Screen> {
                           _selectedNumber = newValue;
                         });
                       },
-                      items: <int>[1, 2, 855]
+                      items: <int>[1, 1-242, 1-246, 1-268, 1-473, 1-758, 1-767, 1-784, 1-809, 1-829, 1-849, 1-868, 1-876,
+                      20, 211, 212, 213, 216, 218, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 
+                      234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 
+                      254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269,
+                      30, 31, 32, 33, 34, 36, 39, 40, 41, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+                      60, 61, 62, 63, 64, 65, 66, 670, 673, 674, 675, 676, 677, 678, 679, 7, 81, 82, 84, 86, 850, 855, 856, 880, 886,
+                      90, 91, 92, 93, 94, 95, 960, 961, 962, 963, 964, 965, 966, 967, 968, 970, 971, 972, 973, 974, 975, 976, 977, 992, 993, 994, 995, 996, 998
+                      ]
                           .map<DropdownMenuItem<int>>((int value) {
                         return DropdownMenuItem<int>(
                           value: value,
@@ -85,11 +93,14 @@ class Login1ScreenState extends State<Login1Screen> {
                       }).toList(),
                     ),
                   ),
-
-                   Expanded(
+                  Expanded(
                     child: Container(
-                      margin: const EdgeInsets.only(left: 10,),
-                      padding: const EdgeInsets.only(left: 10,), // padding use for custom gap between 'Your phone number' & 'Country code'
+                      margin: const EdgeInsets.only(
+                        left: 10,
+                      ),
+                      padding: const EdgeInsets.only(
+                        left: 10,
+                      ), // padding use for custom gap between 'Your phone number' & 'Country code'
                       decoration: const BoxDecoration(
                         border: BorderDirectional(
                           // top: BorderSide(width: 1, color: Colors.white),
@@ -101,9 +112,9 @@ class Login1ScreenState extends State<Login1Screen> {
                       child: const TextField(
                         style: TextStyle(color: Colors.white),
                         decoration: InputDecoration(
-                            hintText: 'Your Phone Number',
-                            hintStyle: TextStyle(color: Colors.white54),
-                            // border: InputBorder.none
+                          hintText: 'Your Phone Number',
+                          hintStyle: TextStyle(color: Colors.white54),
+                          // border: InputBorder.none
                         ),
                       ),
                     ),
@@ -123,8 +134,8 @@ class Login1ScreenState extends State<Login1Screen> {
                   );
                 },
                 child: const Text(
-                  "Next",
-                  style: TextStyle(color: Colors.blueAccent, fontSize: 18),
+                  "Continue",
+                  style: TextStyle(color: Colors.blueAccent, fontSize: 20),
                 ),
               ),
             ),

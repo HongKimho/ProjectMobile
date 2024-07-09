@@ -97,8 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   // Control text in boxSearch
                   Expanded(
                     child: TextField(
-                      keyboardType: TextInputType
-                          .multiline, // Control text typing in FieldBox
+                      keyboardType: TextInputType.multiline, // Control text typing in FieldBox
                       style: const TextStyle(
                           color: ColorUse.text,
                           fontSize: 14,
