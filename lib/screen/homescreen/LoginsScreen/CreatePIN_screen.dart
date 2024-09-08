@@ -1,5 +1,3 @@
-
-
 import 'package:chat_app/data/color.dart';
 import 'package:chat_app/screen/homescreen/LoginsScreen/AddProfile_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +14,15 @@ class _CreatePIN_ScreenState extends State<CreatePIN_Screen> {
   final TextEditingController pinController = TextEditingController();
   final TextEditingController rePinController = TextEditingController();
 
+  final FocusNode pinFocusNode = FocusNode();
+  final FocusNode rePinFocusNode = FocusNode();
+
   @override
   void dispose() {
     pinController.dispose();
     rePinController.dispose();
+    pinFocusNode.dispose();
+    rePinFocusNode.dispose();
     super.dispose();
   }
 
@@ -86,17 +89,19 @@ class _CreatePIN_ScreenState extends State<CreatePIN_Screen> {
                 decoration: const InputDecoration(
                   labelText: 'Enter new PIN Code',
                   border: OutlineInputBorder(),
+                  counterText: '',
                 ),
                 inputFormatters: [
-                  FilteringTextInputFormatter.digitsOnly, // Allow input numbers only
+                  FilteringTextInputFormatter
+                      .digitsOnly, // Allow input numbers only
                 ],
                 onChanged: (value) {
-                  if (value.length == 6) {
-                    _autoNavigate(); // Check if auto navigation is needed
-                  }
-                },
+                if (value.length == 6) {
+                  // Move the cursor to the re-enter PIN field
+                  FocusScope.of(context).requestFocus(rePinFocusNode);
+                }
+              },
               ),
-              
             ),
             const SizedBox(height: 10),
 
@@ -111,6 +116,7 @@ class _CreatePIN_ScreenState extends State<CreatePIN_Screen> {
               decoration: const InputDecoration(
                 labelText: 'Re-enter new PIN Code',
                 border: OutlineInputBorder(),
+                counterText: '',
               ),
               inputFormatters: [
                 FilteringTextInputFormatter.digitsOnly // Allow input numbers only
@@ -121,9 +127,9 @@ class _CreatePIN_ScreenState extends State<CreatePIN_Screen> {
                 }
               },
             ),
-            const SizedBox(height: 1),
+            const SizedBox(height: 10),
             const Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
                   'PIN Code must be at least 6 digits',
@@ -135,7 +141,6 @@ class _CreatePIN_ScreenState extends State<CreatePIN_Screen> {
                 ),
               ],
             ),
-            const SizedBox(height: 40),
           ],
         ),
       ),

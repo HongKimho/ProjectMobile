@@ -107,11 +107,11 @@ class Login1ScreenState extends State<Login1Screen> {
                         decoration: InputDecoration(
                           hintText: 'Your Phone Number',
                           hintStyle: TextStyle(color: Colors.white54),
-                          counterText: '', // Removes the counter text
+                          counterText: '',
                         ),
-                        inputFormatters: [
-                          FilteringTextInputFormatter.digitsOnly,
-                        ],
+                        // inputFormatters: [
+                        //   FilteringTextInputFormatter.digitsOnly,
+                        // ],
                       ),
                     ),
                   ),
