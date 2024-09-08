@@ -67,8 +67,8 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
       // AppBar
       appBar: AppBar(
         backgroundColor: ColorUse.background,
-        title: Center
-        (child: const Text(
+        title: const Center
+        (child: Text(
           'Select an Avatar',
           style: TextStyle(color: ColorUse.text),
           )

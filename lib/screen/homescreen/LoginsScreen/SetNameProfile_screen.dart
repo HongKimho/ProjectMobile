@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:chat_app/data/color.dart';
 import 'package:chat_app/screen/homescreen/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 
 void main() {
@@ -91,6 +92,9 @@ class _SetnameprofileScreenState extends State<SetnameprofileScreen> {
                   labelText: 'First Name',
                   border: OutlineInputBorder(),
                 ),
+                inputFormatters: [
+                FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]')), // Allow input numbers only
+              ],
               ),
             ),
 
@@ -102,6 +106,9 @@ class _SetnameprofileScreenState extends State<SetnameprofileScreen> {
                 labelText: 'Last Name',
                 border: OutlineInputBorder(),
               ),
+              inputFormatters: [
+                FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]')), // Allow input numbers only
+              ],
             ),
 
           const SizedBox(height: 20),
