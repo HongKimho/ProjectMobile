@@ -46,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
     await Future.delayed(const Duration(seconds: 3), () {});
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => CreatePIN_Screen()),
+      MaterialPageRoute(builder: (context) => AddProfileScreen()),
     );
   }
 
@@ -64,7 +64,6 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 200,
               fit: BoxFit.cover,
             ),
-
             const SizedBox(height: 2),
             const Text(
               'KIMHOChat',

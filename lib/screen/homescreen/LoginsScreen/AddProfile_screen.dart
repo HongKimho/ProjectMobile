@@ -69,7 +69,7 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
         backgroundColor: ColorUse.background,
         title: const Center
         (child: Text(
-          'Select an Avatar',
+          'Set Profile',
           style: TextStyle(color: ColorUse.text),
           )
         ),
@@ -186,30 +186,32 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
             ),
           ),
 
-          SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.only(right: 370),
-            child: Column(
+          SizedBox(height: 60),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text('Select an avatar', 
                 style: TextStyle(
                   color: ColorUse.text,
-                  fontSize: 16,
+                  fontSize: 20,
                   ),
                 ),
               ],
             ),
           ),
         
-        SizedBox(height: 1),
+        SizedBox(height: 10),
+        // Group Avatar profile.
         Expanded(
             child: Container(
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(10),
               child: GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 4,
-                  mainAxisSpacing: 60,
-                  crossAxisSpacing: 40,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 30,
                 ),
                 
                 itemCount: _avatars.length,
@@ -225,9 +227,13 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
             ),
           ),
 
-
+          SizedBox(height: 10),
             Container(
-              padding: const EdgeInsets.only(bottom: 450),
+              padding: const EdgeInsets.symmetric(horizontal: 170, vertical: 10),
+              margin: EdgeInsets.symmetric(vertical: 20),
+              // width: double.infinity,
+              decoration: BoxDecoration(color: Colors.blue,
+              borderRadius: BorderRadius.circular(20)),
               child: TextButton(
                 onPressed: () {
                   Navigator.pushReplacement(
@@ -238,7 +244,7 @@ class _AddProfileScreenState extends State<AddProfileScreen> {
                 },
                 child: const Text(
                   "Continue",
-                  style: TextStyle(color: Colors.blueAccent, fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
             ),

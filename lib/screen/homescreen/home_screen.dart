@@ -103,11 +103,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontSize: 14,
                           fontWeight: FontWeight.w400),
 
-                      textAlignVertical: TextAlignVertical
-                          .center, // Control textTitle in the FieldBox
+                      textAlignVertical: TextAlignVertical.center, // Control textTitle in the FieldBox
                       decoration: InputDecoration(
-                        border: const OutlineInputBorder(
-                            borderSide: BorderSide.none),
+                      border: const OutlineInputBorder(
+                      borderSide: BorderSide.none),
                         hintText: 'Search',
                         hintStyle: TextStyle(
                           color: Colors.grey.shade400,
